@@ -111,8 +111,6 @@ class ExtendedTestCase extends CakeTestCase {
 				ClassRegistry::getObject(Inflector::camelize($key))->create(false);
 			}
 		}
-		$Controller->Session->delete('Message');
-		$Controller->activeUser = null;
 
 		$default = array(
 			'data' => array(),
