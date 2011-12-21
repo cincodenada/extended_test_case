@@ -112,6 +112,10 @@ class ExtendedTestCase extends CakeTestCase {
 			}
 		}
 
+		//Initialize components
+		$Controller->constructClasses();
+		$Controller->Component->initialize($Controller);
+
 		$default = array(
 			'data' => array(),
 			'method' => 'post'
