@@ -116,6 +116,11 @@ class ExtendedTestCase extends CakeTestCase {
 		$Controller->constructClasses();
 		$Controller->Component->initialize($Controller);
 
+		$Controller->Session->destroy();
+		if(!empty($options['session'])) {
+			$Controller->Session->write($options['session']);
+		}
+
 		$default = array(
 			'data' => array(),
 			'method' => 'post'
