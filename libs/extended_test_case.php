@@ -99,11 +99,11 @@ class ExtendedTestCase extends CakeTestCase {
 		$Controller = $this->testController;
 
 		// reset parameters
-		ClassRegistry::flush();		
-		$Controller->passedArgs = array();
-		$Controller->params = array();
+		ClassRegistry::flush();	 
 		$Controller->url = null;
+		$Controller->params = array();
 		$Controller->action = null;
+		$Controller->passedArgs = array();
 		$Controller->viewVars = array();
 		$keys = ClassRegistry::keys();
 		foreach ($keys as $key) {
